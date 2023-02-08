@@ -61,9 +61,9 @@ class FlexUnlimited:
     "GetOfferFiltersOptions": "https://flex-capacity-na.amazon.com/getOfferFiltersOptions"
   }
 
-  def __init__(self) -> None:
+  def __init__(self, configure="config.json") -> None:
     try:
-      with open("config.json") as configFile:
+      with open(configure) as configFile:
         config = json.load(configFile)
         self.username = config["username"]
         self.password = config["password"]
@@ -407,8 +407,10 @@ class FlexUnlimited:
           from_=self.twilioFromNumber,
           body=offer.toString())
       Log.info(f"Successfully accepted an offer.")
+      print(offer.toString())
     else:
       Log.error(f"Unable to accept an offer. Request returned status code {request.status_code}")
+      print(offer.toString())
 
   def __processOffer(self, offer: Offer):
     if offer.hidden:
@@ -435,8 +437,9 @@ class FlexUnlimited:
 
   def run(self):
     Log.info("Starting job search...")
+    self.__retryCount = 0
     while self.__retryCount < self.retryLimit:
-      if not self.__retryCount % 50:
+      if not self.__retryCount % 10:
         print(self.__retryCount, 'requests attempted\n\n')
 
       offersResponse = self.__getOffers()
@@ -458,7 +461,7 @@ class FlexUnlimited:
           self.__rate_limit_number = 1
         Log.info("Resuming search.")
       else:
-        Log.error(offersResponse.json())
+        #Log.error(offersResponse.json())
         break
       time.sleep(self.refreshInterval)
     Log.info("Job search cycle ending...")
