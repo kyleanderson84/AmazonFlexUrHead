@@ -3,25 +3,23 @@
   "password": "@Th3end2110%",
   "minBlockRate": 100,
   "minPayRatePerHour": 30,
-  "arrivalBuffer": 45,
+  "arrivalBuffer": 55,
   "desiredWarehouses": [],
   "desiredStartTime": "00:00",
   "desiredEndTime": "23:59",
   "desiredWeekdays": [
     "Mon",
     "Tue",
-    "Wed",
-    "Thu",
     "Fri",
     "Sat",
     "Sun"
   ],
   "retryLimit": 200,
-  "refreshInterval": 1.2,
+  "refreshInterval": 1.1,
   "twilioAcctSid": "ACd6673917eb8285083b2f0312658c291f",
   "twilioAuthToken": "faa12add013c0c19f2a45713158711ee",
   "twilioFromNumber": "15644654289",
   "twilioToNumber": "18608571168",
   "refreshToken": "Atnr|EwICIEo4TkLF8lTVIxuTggpUspWwhW3fHiAzOf5Opg5ErlwSAbn-L5EM36yPYvAvxJp0wsoLQSFMwmalnJ70R_2AjxjIE1-1S-OtVoKWdHM1TyqqaFWhUi0RTWyF-xQqTNMTZK8sjcS0qOrO5A7Zx5P0QJrkG0PGcfztQSr541kvpuFMcm6aSv2bKU7oaVBLjDzUuLGSk-CUOLUJg9b-IIAct3PmYUFEebz802g8ethMS0uddL3VdZC0cG_ilu1GzSLrxdBI-b0OUQRR3aTiIPEsMgKc",
-  "accessToken": "Atna|EwICIAOVvsINfMuKGu5lnuMuuiafxklnnd-LfmgyGpIdzYJlk8Y69qPQLX3aHBuIbUfpO0xOa4_A7uMND62_BWJ8BS8_KwiG9MUFVDE4g_z6DWMQ3a5vigdUaqjmfDL8iSnCSXA9pQCZJZuIEeQShnuzQxFFJFYBap3gYGzc-D-nRWRfSgBWnnUwxAkU_8yvr9w6x1B4lO-dzhCr3zog0b6XPdIi1D0C4BnFwhmTZZ7KkO5YQwWcpW7UMnnVmybM2UHytauIINaY6fLKjRC1TLXGp8mBGFnxsdRcVsu9fiK9ZCl3lA"
+  "accessToken": "Atna|EwICIFw4L4SPgqLbkTxbBImOkL_om1owJoRbi2ZapkNbjRFvXr4MkrSHQw_a7Nfg3CfKBVSTotjySMagQA24iUZ17tS-IwBftwXv5VcuHZyshTV6EALVd2sIh6ScTCDbeYIkcxRW1h7JjXaQxlBJsJtU7pLEVDYZQckSUNcIdFKVAMKnrJbkKB9-36OZ7jPmD3EZbtH88qZVoHSRdRyBFGSDzIPNNS-pK92UYqzhmxwreZVnHGZkrtf7T9mkoGSBLzv8qDLAkG4A8hvWug9vDDX0xZJmBy4Tj3uOAzogjrBR-mPfwA"
 }

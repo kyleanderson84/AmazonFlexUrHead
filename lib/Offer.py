@@ -14,15 +14,16 @@ class Offer:
         self.hidden = offerResponseObject.get("hidden")
         self.ratePerHour = self.blockRate / ((self.endTime - self.expirationDate).seconds / 3600)
         self.weekday = self.expirationDate.weekday()
+        self.blockDuration = (self.endTime - self.expirationDate).seconds / 3600
     
     def toString(self) -> str:
-        blockDuration = (self.endTime - self.expirationDate).seconds / 3600
+
 
         body = 'Location: ' + self.location + '\n'
         body += 'Date: ' + str(self.expirationDate.month) + '/' + str(self.expirationDate.day) + '\n'
         body += 'Pay: ' + str(self.blockRate) + '\n'
         body += 'Pay rate per hour: ' + str(self.ratePerHour) + '\n'
-        body += 'Block Duration: ' + str(blockDuration) + f'{"hour" if blockDuration == 1 else "hours"}\n'
+        body += 'Block Duration: ' + str(self.blockDuration) + f'{"hour" if self.blockDuration == 1 else "hours"}\n'
 
         if not self.expirationDate.minute:
             body += 'Start time: ' + str(self.expirationDate.hour) + '00\n'
